@@ -1,0 +1,10 @@
+@import "_variables/variables";
+@import "_mixins/mixins";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 1.125rem;
+  font-family: 'Inter', sans-serif;
+}
