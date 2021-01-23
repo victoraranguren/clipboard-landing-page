@@ -1,5 +1,6 @@
 @import "_variables/variables";
 @import "_mixins/mixins";
+@import "_utilities/utilities";
 
 *{
   box-sizing: border-box;
@@ -33,6 +34,9 @@ body{
   margin-bottom: 6em;
   &-first{
     margin-bottom: 8em;
+    @include mq($mq, md){
+      margin-bottom: 4em;
+    }
   }
   &-third{
     margin: 6em auto 8em auto;
@@ -62,21 +66,49 @@ body{
       flex-direction: row; 
       width: 110%;
     }
+    .img{
+      display: inline-block;
+      width: 100%;
+      margin: 3em auto;
+      @include mq($mq, md){
+        position: relative;
+        left: -15%;
+        width: 60%; 
+      }
+    }
+  }
+  &-second{
+    @extend .box;
+    @include mq($mq, md){
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      .box-item{
+        width: 30%;
+        height: auto;
+      }
+      .box-icon{
+        height: 2em;
+      }
+    }
+    .title-sm,
+    .text-sm{
+    @include mq($mq, md){
+      text-align: center;
+      }
+    }
   }
   &-img{
     display: inline-block;
     width: 100%;
     margin: 3em auto;
-    @include mq($mq, md){
-      position: relative;
-      left: -15%;
-      width: 60%; 
-    }
   }
   &-list{
     @include mq($mq, md){
       position: relative;
       left: -10%;
+      margin-top: 5em;
+      margin-left: 3em;
       .title{
         text-align: left;
       }
@@ -97,97 +129,4 @@ body{
   &-icon{
     margin-top: 4em;
   }
-}
-//Utilities
-.container{
-  width: 90%;
-  margin: 0 auto;
-  @include mq($mq, md){
-    width: 80%;
-  }
-}
-.title{
-  font-weight: 600;
-  font-size: 1.6em;
-  text-align: center;
-  color: $dark-grayish-blue;
-  &-sm{
-    @extend .title;
-    font-size: 1.5em;
-  }
-  &-lg{
-    @extend .title;
-    font-size: 1.75em;
-  }
-}
-.text{
-  color: $grayish-blue;
-  font-weight: 400;
-  text-align: center;
-  font-size: 1.125rem;
-  &-sm{
-    @extend .text;
-    font-size: 1em;
-  }
-}
-.group{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  &-btn{
-  @extend .group;
-  @include mq($mq, md){
-    width: 80%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: auto;
-  }
-  }
-  &-link{
-    @extend .group;
-    margin: 1em auto;
-    .link{
-      display: inline-block;
-      margin: .75em auto;
-    }
-  }
-  &-social{
-    @extend .group;
-    margin-top: 1em;
-    flex-direction: row;
-    align-items: center;
-    .link{
-      display: inline-block;
-      margin: 0 1em;
-    }
-  }
-  .btn{
-    display: inline-block;
-    width: 100%;
-    padding: 1em;
-    border-radius: 5em;
-    margin: .75em 0;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    @include mq($mq, md){
-      width: auto;
-      padding: 1em 2em;
-      margin: .75em 0;
-    }
-    &-ios{
-      @extend .btn;
-      background: $strong-cyan;
-    }
-    &-mac{
-      @extend .btn;
-      background: $ligh-blue;
-    }
-  }
-}
-
-.link{
-  color: $dark-grayish-blue;
-  text-decoration: none;
 }
