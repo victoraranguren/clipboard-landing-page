@@ -5,6 +5,66 @@
 body {
   font-size: 1.125rem;
   font-family: "Inter", sans-serif;
+  color: #4c545d;
+}
+
+.hero {
+  background: url("/images/bg-header-mobile.png") top right no-repeat;
+  background-size: cover;
+  padding-top: 6.25rem;
+}
+.hero .container {
+  display: flex;
+  flex-direction: column;
+}
+.hero .logo {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title, .title-lg, .title-sm {
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+}
+.title-lg {
+  font-size: 1.75em;
+}
+
+.text {
+  color: #9fabb2;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.group .btn, .group .btn-mac, .group .btn-ios {
+  display: inline-block;
+  width: 100%;
+  padding: 1.25em;
+  border-radius: 5em;
+  margin: 1em auto;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.group .btn-ios {
+  background: #26baa4;
+}
+.group .btn-mac {
+  background: #6173ff;
 }
 
 /*# sourceMappingURL=custom.css.map */

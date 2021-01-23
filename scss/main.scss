@@ -7,4 +7,66 @@
 body{
   font-size: 1.125rem;
   font-family: 'Inter', sans-serif;
+  color: $dark-grayish-blue;
+}
+.hero{
+  background: url('/images/bg-header-mobile.png') top right no-repeat;
+  background-size: cover;
+  padding-top: 6.25rem;
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .logo{
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+  }
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+//Utilities
+.title{
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  &-sm{
+    @extend .title;
+  }
+  &-lg{
+    @extend .title;
+    font-size: 1.75em;
+  }
+}
+.text{
+  color: $grayish-blue;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.125rem;
+}
+.group{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .btn{
+    display: inline-block;
+    width: 100%;
+    padding: 1.25em;
+    border-radius: 5em;
+    margin: 1em auto;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    &-ios{
+      @extend .btn;
+      background: $strong-cyan;
+    }
+    &-mac{
+      @extend .btn;
+      background: $ligh-blue;
+    }
+  }
 }
