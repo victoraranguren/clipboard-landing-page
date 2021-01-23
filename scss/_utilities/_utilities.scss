@@ -46,9 +46,21 @@
   &-link{
     @extend .group;
     margin: 1em auto;
+    @include mq($mq, md){
+      width: 55%;
+      flex-direction: row;
+      justify-content: start;
+      flex-wrap: wrap;
+    }
     .link{
       display: inline-block;
       margin: .75em auto;
+      @include mq($mq, md){
+        width: 33%;
+        margin: 0;
+        text-align: left;
+        padding: .75em;
+      }
     }
   }
   &-social{
@@ -59,6 +71,9 @@
     .link{
       display: inline-block;
       margin: 0 1em;
+      @include mq($mq, md){
+        margin: 0 .5em;
+      }
     }
   }
   .btn{

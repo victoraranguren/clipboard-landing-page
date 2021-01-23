@@ -47,9 +47,25 @@
 .group-link {
   margin: 1em auto;
 }
+@media screen and (min-width: 768px) {
+  .group-link {
+    width: 55%;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+}
 .group-link .link {
   display: inline-block;
   margin: 0.75em auto;
+}
+@media screen and (min-width: 768px) {
+  .group-link .link {
+    width: 33%;
+    margin: 0;
+    text-align: left;
+    padding: 0.75em;
+  }
 }
 .group-social {
   margin-top: 1em;
@@ -59,6 +75,11 @@
 .group-social .link {
   display: inline-block;
   margin: 0 1em;
+}
+@media screen and (min-width: 768px) {
+  .group-social .link {
+    margin: 0 0.5em;
+  }
 }
 .group .btn, .group .btn-mac, .group .btn-ios, .group-btn .btn, .group-btn .btn-mac, .group-btn .btn-ios, .group-link .btn, .group-link .btn-mac, .group-link .btn-ios, .group-social .btn, .group-social .btn-mac, .group-social .btn-ios {
   display: inline-block;
@@ -136,18 +157,38 @@ body {
 .section-third {
   margin: 6em auto 8em auto;
 }
+@media screen and (min-width: 768px) {
+  .section-third {
+    margin: 8em auto;
+  }
+}
 
 .footer {
+  background: #f2f2f2;
+}
+.footer .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #f2f2f2;
+  align-items: center;
   padding: 3em 0;
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    padding: 1.25em 0;
+  }
 }
 .footer .logo {
   display: inline-block;
   width: 15%;
   margin: 0.25em auto;
+}
+@media screen and (min-width: 768px) {
+  .footer .logo {
+    width: 8%;
+    height: 5%;
+  }
 }
 
 .box, .box-enterprises, .box-second, .box-first {
