@@ -15,6 +15,11 @@ body {
   padding-top: 6.25rem;
   margin-bottom: 8em;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    background: url("/images/bg-header-desktop.png") top center no-repeat;
+  }
+}
 .hero .container {
   display: flex;
   flex-direction: column;
@@ -74,6 +79,11 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
 
 .title, .title-lg, .title-sm {
   font-weight: 600;
@@ -95,10 +105,18 @@ body {
   font-size: 1.125rem;
 }
 
-.group, .group-social, .group-link {
+.group, .group-social, .group-link, .group-btn {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .group-btn {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+  }
 }
 .group-link {
   margin: 1em auto;
@@ -116,21 +134,28 @@ body {
   display: inline-block;
   margin: 0 1em;
 }
-.group .btn, .group .btn-mac, .group .btn-ios, .group-link .btn, .group-link .btn-mac, .group-link .btn-ios, .group-social .btn, .group-social .btn-mac, .group-social .btn-ios {
+.group .btn, .group .btn-mac, .group .btn-ios, .group-btn .btn, .group-btn .btn-mac, .group-btn .btn-ios, .group-link .btn, .group-link .btn-mac, .group-link .btn-ios, .group-social .btn, .group-social .btn-mac, .group-social .btn-ios {
   display: inline-block;
   width: 100%;
   padding: 1em;
   border-radius: 5em;
-  margin: 0.75em auto;
+  margin: 0.75em 0;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
   text-align: center;
 }
-.group .btn-ios, .group-link .btn-ios, .group-social .btn-ios {
+@media screen and (min-width: 768px) {
+  .group .btn, .group .btn-mac, .group .btn-ios, .group-btn .btn, .group-btn .btn-mac, .group-btn .btn-ios, .group-link .btn, .group-link .btn-mac, .group-link .btn-ios, .group-social .btn, .group-social .btn-mac, .group-social .btn-ios {
+    width: auto;
+    padding: 1em 2em;
+    margin: 0.75em 0;
+  }
+}
+.group .btn-ios, .group-btn .btn-ios, .group-link .btn-ios, .group-social .btn-ios {
   background: #26baa4;
 }
-.group .btn-mac, .group-link .btn-mac, .group-social .btn-mac {
+.group .btn-mac, .group-btn .btn-mac, .group-link .btn-mac, .group-social .btn-mac {
   background: #6173ff;
 }
 

@@ -15,6 +15,9 @@ body{
   background-size: cover;
   padding-top: 6.25rem;
   margin-bottom: 8em;
+  @include mq($mq, md){
+    background: url('/images/bg-header-desktop.png') top center no-repeat;    
+  }
   .container{
     display: flex;
     flex-direction: column;
@@ -78,6 +81,9 @@ body{
 .container{
   width: 90%;
   margin: 0 auto;
+  @include mq($mq, md){
+    width: 80%;
+  }
 }
 .title{
   font-weight: 600;
@@ -103,6 +109,15 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  &-btn{
+  @extend .group;
+  @include mq($mq, md){
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+  }
   &-link{
     @extend .group;
     margin: 1em auto;
@@ -126,11 +141,16 @@ body{
     width: 100%;
     padding: 1em;
     border-radius: 5em;
-    margin: .75em auto;
+    margin: .75em 0;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
     text-align: center;
+    @include mq($mq, md){
+      width: auto;
+      padding: 1em 2em;
+      margin: .75em 0;
+    }
     &-ios{
       @extend .btn;
       background: $strong-cyan;
