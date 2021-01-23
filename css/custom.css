@@ -31,6 +31,9 @@ body {
 .section-first {
   margin-bottom: 8em;
 }
+.section-third {
+  margin-top: 6em;
+}
 
 .box, .box-enterprises, .box-first {
   display: flex;
@@ -58,9 +61,12 @@ body {
 
 .title, .title-lg, .title-sm {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.6em;
   text-align: center;
   color: #4c545d;
+}
+.title-sm {
+  font-size: 1.5em;
 }
 .title-lg {
   font-size: 1.75em;
@@ -81,9 +87,9 @@ body {
 .group .btn, .group .btn-mac, .group .btn-ios {
   display: inline-block;
   width: 100%;
-  padding: 1.25em;
+  padding: 1em;
   border-radius: 5em;
-  margin: 1em auto;
+  margin: 0.75em auto;
   font-weight: 700;
   color: #fff;
   text-decoration: none;

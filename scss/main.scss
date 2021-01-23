@@ -30,6 +30,9 @@ body{
   &-first{
     margin-bottom: 8em;
   }
+  &-third{
+    margin-top: 6em;
+  }
 }
 // Box
 .box{
@@ -61,11 +64,12 @@ body{
 //Utilities
 .title{
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.6em;
   text-align: center;
   color: $dark-grayish-blue;
   &-sm{
     @extend .title;
+    font-size: 1.5em;
   }
   &-lg{
     @extend .title;
@@ -85,9 +89,9 @@ body{
   .btn{
     display: inline-block;
     width: 100%;
-    padding: 1.25em;
+    padding: 1em;
     border-radius: 5em;
-    margin: 1em auto;
+    margin: .75em auto;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
