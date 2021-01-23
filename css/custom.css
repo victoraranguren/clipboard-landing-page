@@ -5,13 +5,15 @@
 body {
   font-size: 1.125rem;
   font-family: "Bai Jamjuree", "Inter", "Open Sans", "SF Pro Display", sans-serif;
-  color: #4c545d;
+  color: #9fabb2;
+  text-align: center;
 }
 
 .hero {
   background: url("/images/bg-header-mobile.png") top right no-repeat;
   background-size: cover;
   padding-top: 6.25rem;
+  margin-bottom: 8em;
 }
 .hero .container {
   display: flex;
@@ -23,6 +25,32 @@ body {
   width: auto;
 }
 
+.section {
+  margin-bottom: 6em;
+}
+.section-first {
+  margin-bottom: 8em;
+}
+
+.box, .box-enterprises, .box-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.box-img {
+  display: inline-block;
+  width: 100%;
+  margin: 3em auto;
+}
+.box-enterprises {
+  margin-top: 5em;
+}
+.box-enterprises .img {
+  display: inline-block;
+  width: 40%;
+  margin: 2em auto;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -32,6 +60,7 @@ body {
   font-weight: 600;
   font-size: 1.5em;
   text-align: center;
+  color: #4c545d;
 }
 .title-lg {
   font-size: 1.75em;

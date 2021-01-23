@@ -7,12 +7,14 @@
 body{
   font-size: 1.125rem;
   font-family: 'Bai Jamjuree', 'Inter', 'Open Sans', 'SF Pro Display', sans-serif;
-  color: $dark-grayish-blue;
+  color: $grayish-blue;
+  text-align: center;
 }
 .hero{
   background: url('/images/bg-header-mobile.png') top right no-repeat;
   background-size: cover;
   padding-top: 6.25rem;
+  margin-bottom: 8em;
   .container{
     display: flex;
     flex-direction: column;
@@ -21,6 +23,35 @@ body{
     display: inline-block;
     margin: 0 auto;
     width: auto;
+  }
+}
+.section{
+  margin-bottom: 6em;
+  &-first{
+    margin-bottom: 8em;
+  }
+}
+// Box
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &-first{
+    @extend .box;
+  }
+  &-img{
+    display: inline-block;
+    width: 100%;
+    margin: 3em auto;
+  }
+  &-enterprises{
+    @extend .box;
+    margin-top: 5em;
+    .img{
+      display: inline-block;
+      width: 40%;
+      margin: 2em auto;
+    }
   }
 }
 .container{
@@ -32,6 +63,7 @@ body{
   font-weight: 600;
   font-size: 1.5em;
   text-align: center;
+  color: $dark-grayish-blue;
   &-sm{
     @extend .title;
   }
