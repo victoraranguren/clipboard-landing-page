@@ -25,13 +25,27 @@ body{
     width: auto;
   }
 }
+// Section
 .section{
   margin-bottom: 6em;
   &-first{
     margin-bottom: 8em;
   }
   &-third{
-    margin-top: 6em;
+    margin: 6em auto 8em auto;
+  }
+}
+// Footer
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f2f2f2;
+  padding: 3em 0;
+  .logo{
+    display: inline-block;
+    width: 15%;
+    margin: .25em auto;
   }
 }
 // Box
@@ -57,11 +71,11 @@ body{
     }
   }
 }
+//Utilities
 .container{
   width: 90%;
   margin: 0 auto;
 }
-//Utilities
 .title{
   font-weight: 600;
   font-size: 1.6em;
@@ -86,6 +100,24 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  &-link{
+    @extend .group;
+    margin: 1em auto;
+    .link{
+      display: inline-block;
+      margin: .75em auto;
+    }
+  }
+  &-social{
+    @extend .group;
+    margin-top: 1em;
+    flex-direction: row;
+    align-items: center;
+    .link{
+      display: inline-block;
+      margin: 0 1em;
+    }
+  }
   .btn{
     display: inline-block;
     width: 100%;
@@ -105,4 +137,9 @@ body{
       background: $ligh-blue;
     }
   }
+}
+
+.link{
+  color: $dark-grayish-blue;
+  text-decoration: none;
 }

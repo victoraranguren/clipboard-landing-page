@@ -32,7 +32,20 @@ body {
   margin-bottom: 8em;
 }
 .section-third {
-  margin-top: 6em;
+  margin: 6em auto 8em auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f2f2f2;
+  padding: 3em 0;
+}
+.footer .logo {
+  display: inline-block;
+  width: 15%;
+  margin: 0.25em auto;
 }
 
 .box, .box-enterprises, .box-first {
@@ -79,12 +92,28 @@ body {
   font-size: 1.125rem;
 }
 
-.group {
+.group, .group-social, .group-link {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.group .btn, .group .btn-mac, .group .btn-ios {
+.group-link {
+  margin: 1em auto;
+}
+.group-link .link {
+  display: inline-block;
+  margin: 0.75em auto;
+}
+.group-social {
+  margin-top: 1em;
+  flex-direction: row;
+  align-items: center;
+}
+.group-social .link {
+  display: inline-block;
+  margin: 0 1em;
+}
+.group .btn, .group .btn-mac, .group .btn-ios, .group-link .btn, .group-link .btn-mac, .group-link .btn-ios, .group-social .btn, .group-social .btn-mac, .group-social .btn-ios {
   display: inline-block;
   width: 100%;
   padding: 1em;
@@ -95,11 +124,16 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.group .btn-ios {
+.group .btn-ios, .group-link .btn-ios, .group-social .btn-ios {
   background: #26baa4;
 }
-.group .btn-mac {
+.group .btn-mac, .group-link .btn-mac, .group-social .btn-mac {
   background: #6173ff;
+}
+
+.link {
+  color: #4c545d;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=custom.css.map */
