@@ -58,10 +58,35 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .box-first {
+    flex-direction: row;
+    width: 110%;
+  }
+}
 .box-img {
   display: inline-block;
   width: 100%;
   margin: 3em auto;
+}
+@media screen and (min-width: 768px) {
+  .box-img {
+    position: relative;
+    left: -15%;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .box-list {
+    position: relative;
+    left: -10%;
+  }
+  .box-list .title, .box-list .title-lg, .box-list .title-sm {
+    text-align: left;
+  }
+  .box-list .text, .box-list .text-sm {
+    text-align: left;
+  }
 }
 .box-enterprises {
   margin-top: 5em;
@@ -98,11 +123,14 @@ body {
   font-size: 1.75em;
 }
 
-.text {
+.text, .text-sm {
   color: #9fabb2;
   font-weight: 400;
   text-align: center;
   font-size: 1.125rem;
+}
+.text-sm {
+  font-size: 1em;
 }
 
 .group, .group-social, .group-link, .group-btn {
